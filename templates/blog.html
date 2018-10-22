@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Myisha's Wine Down</h1>
+    
+
+    {% if blog_list|length == 0 %}
+    <p> No blogs yet </p>
+    {% else %}
+
+        <div> 
+            {% for blog in blog_list %}
+            <li>
+                <h2><a href="./blog?id={{blog.id}}" >{{blog.title}}</a> </h2>   
+                <p>{{blog.body}}</p>          
+
+
+            </li>
+                
+            {% endfor %}
+        
+            </div>
+            {% endif %}
+      
+
+
+{% endblock %}
