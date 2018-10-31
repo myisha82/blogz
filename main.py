@@ -155,7 +155,7 @@ def login():
         if user and user.password == password:
             session['username']= username
     #         #flash("Logged in")
-            return render_template('/newpost.html')
+            return redirect('/')
     #     #2. User enters a username that is stored in the database w/an incorrect password and is redirected to the /login page w/a message thst their password is incorrect    
         else:    
             flash("User password incorrect")
