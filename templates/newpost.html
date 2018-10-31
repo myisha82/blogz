@@ -3,11 +3,11 @@
 
 {% block content %}
 
-    <h1>Add a Blog</h1>
+    <h1>New Post</h1>
     <form action='/newpost', method="POST">
     
         <label>
-            Title of Post 
+            Title 
         <br>
             <input type="text" name="blog_title" />
             <span class="error">{{title_error}} </span>  
@@ -15,7 +15,7 @@
         <br>
 
         <label>
-            Enter Text 
+            Post
         <br>
         <textarea name="blog_body" rows="10" cols="20"></textarea>    
         <span class="error">{{body_error}} </span>  
